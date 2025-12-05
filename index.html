@@ -983,6 +983,23 @@
             stopTour();
         });
 
+        // Demo mode activation - use Tbilisi Old Town coordinates
+        function activateDemoMode() {
+            currentLocation = {
+                lat: 41.7292,
+                lon: 44.8160,
+                accuracy: 10
+            };
+            document.getElementById('locationStatus').innerHTML = '✅';
+            document.getElementById('locationTitle').textContent = '📍 Demo Mode Active';
+            document.getElementById('locationDesc').textContent = 'Using Tbilisi Old Town as your location';
+            locationDisplay.style.display = 'block';
+            startLocationBtn.style.display = 'none';
+            document.getElementById('demoModeBtn').style.display = 'none';
+            watchLocationBtn.style.display = 'inline-flex';
+            generateTour();
+        }
+
         startTourBtn.addEventListener('click', startAudioTour);
         pauseTourBtn.addEventListener('click', pauseTour);
         stopTourBtn.addEventListener('click', stopTour);
