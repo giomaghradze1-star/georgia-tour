@@ -964,6 +964,7 @@
 
         // Event listeners
         startLocationBtn.addEventListener('click', startLocationTracking);
+        document.getElementById('demoModeBtn').addEventListener('click', activateDemoMode);
         watchLocationBtn.addEventListener('click', () => {
             if (watchId !== null) {
                 navigator.geolocation.clearWatch(watchId);
