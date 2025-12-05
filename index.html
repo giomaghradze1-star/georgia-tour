@@ -41,7 +41,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: var(--space-16);
         }
@@ -111,27 +111,6 @@
             color: var(--color-text-secondary);
         }
 
-        .location-display {
-            background: rgba(32, 128, 144, 0.05);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-base);
-            padding: var(--space-16);
-            margin-bottom: var(--space-16);
-            font-family: monospace;
-            font-size: 12px;
-            word-break: break-all;
-        }
-
-        .location-label {
-            font-weight: 600;
-            color: var(--color-text);
-            margin-bottom: var(--space-8);
-        }
-
-        .location-value {
-            color: var(--color-text-secondary);
-        }
-
         .button-group {
             display: flex;
             gap: var(--space-8);
@@ -185,6 +164,259 @@
         .btn:disabled {
             opacity: 0.5;
             cursor: not-allowed;
+        }
+
+        /* Landing Page Styles */
+        .landing-page {
+            display: block;
+        }
+
+        .app-page {
+            display: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: var(--space-32) 0;
+            background: linear-gradient(135deg, rgba(32, 128, 144, 0.1), rgba(168, 75, 47, 0.1));
+            border-radius: var(--radius-base);
+            margin-bottom: var(--space-32);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin: 0 0 var(--space-16) 0;
+            color: var(--color-primary);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            margin: 0 0 var(--space-24) 0;
+        }
+
+        .cta-btn {
+            padding: var(--space-16) var(--space-32);
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: var(--space-32);
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin: 0 0 var(--space-16) 0;
+            color: var(--color-primary);
+        }
+
+        .section p {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin: 0 0 var(--space-16) 0;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-24);
+            margin: var(--space-24) 0;
+        }
+
+        .step {
+            background: rgba(32, 128, 144, 0.05);
+            padding: var(--space-24);
+            border-radius: var(--radius-base);
+            text-align: center;
+        }
+
+        .step-number {
+            background: var(--color-primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin: 0 auto var(--space-12) auto;
+            font-size: 18px;
+        }
+
+        .step h3 {
+            margin: 0 0 var(--space-8) 0;
+            font-size: 16px;
+        }
+
+        .step p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: var(--space-24);
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .contact-item h3 {
+            margin: 0 0 var(--space-8) 0;
+            color: var(--color-primary);
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Payment Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: var(--color-surface);
+            padding: var(--space-32);
+            border-radius: var(--radius-base);
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.3s ease;
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: var(--space-24);
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--color-primary);
+        }
+
+        .modal-header p {
+            margin: var(--space-8) 0 0 0;
+            font-size: 14px;
+            color: var(--color-text-secondary);
+        }
+
+        .price-display {
+            text-align: center;
+            padding: var(--space-24);
+            background: rgba(32, 128, 144, 0.08);
+            border-radius: var(--radius-base);
+            margin-bottom: var(--space-24);
+        }
+
+        .price-display .amount {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin: 0;
+        }
+
+        .price-display p {
+            margin: var(--space-8) 0 0 0;
+            color: var(--color-text-secondary);
+            font-size: 13px;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-16);
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: var(--space-8);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: var(--space-12) var(--space-16);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            font-size: 14px;
+            color: var(--color-text);
+            background: var(--color-surface);
+            font-family: inherit;
+        }
+
+        .form-input:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 0;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: var(--space-12);
+            margin-top: var(--space-24);
+        }
+
+        .modal-footer .btn {
+            flex: 1;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Tour Styles */
+        .location-display {
+            background: rgba(32, 128, 144, 0.05);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            padding: var(--space-16);
+            margin-bottom: var(--space-16);
+            font-family: monospace;
+            font-size: 12px;
+            word-break: break-all;
+        }
+
+        .location-label {
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: var(--space-8);
+        }
+
+        .location-value {
+            color: var(--color-text-secondary);
         }
 
         .tour-list {
@@ -274,18 +506,6 @@
             outline-offset: 0;
         }
 
-        .form-group {
-            margin-bottom: var(--space-16);
-        }
-
-        .form-label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--color-text);
-            margin-bottom: var(--space-8);
-        }
-
         .info-box {
             background: rgba(168, 75, 47, 0.08);
             border-left: 4px solid var(--color-warning);
@@ -308,15 +528,6 @@
 
         @keyframes spin {
             to { transform: rotate(360deg); }
-        }
-
-        .distance-meter {
-            font-size: 12px;
-            color: var(--color-text-secondary);
-            margin-top: var(--space-8);
-            padding: var(--space-8);
-            background: rgba(32, 128, 144, 0.05);
-            border-radius: var(--radius-base);
         }
 
         .route-tracking {
@@ -399,12 +610,29 @@
             50% { opacity: 0.5; }
         }
 
+        .nav-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-24);
+            padding-bottom: var(--space-16);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .nav-header button {
+            padding: var(--space-8) var(--space-12);
+            font-size: 12px;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: var(--space-8);
             }
             .header h1 {
                 font-size: 24px;
+            }
+            .hero h1 {
+                font-size: 28px;
             }
             .card {
                 padding: var(--space-16);
@@ -415,110 +643,220 @@
             .btn {
                 width: 100%;
             }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .steps {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🎯 Georgia AI Tour Guide</h1>
-            <p>Location-based audio tours with AI narration</p>
-        </div>
-
-        <!-- Location Card -->
-        <div class="card">
-            <h2>📍 Your Location</h2>
-            <div class="status-section">
-                <div class="status-icon">
-                    <span id="locationStatus" class="spinner"></span>
-                </div>
-                <div class="status-content">
-                    <h3 id="locationTitle">Getting your location...</h3>
-                    <p id="locationDesc">Requesting GPS access...</p>
-                </div>
+        <!-- LANDING PAGE -->
+        <div class="landing-page" id="landingPage">
+            <div class="hero">
+                <h1>🌍 Georgia AI Tour Guide</h1>
+                <p>Explore Georgia with AI-powered audio tours guided by your location</p>
+                <button class="btn btn--primary cta-btn" onclick="goToApp()">🚀 Get Started</button>
             </div>
 
-            <div class="location-display" id="locationDisplay" style="display: none;">
-                <div class="location-label">Current Coordinates:</div>
-                <div class="location-value">
-                    Lat: <span id="latValue">-</span>, Lon: <span id="lonValue">-</span>
-                </div>
-                <div class="location-label" style="margin-top: var(--space-12);">Nearest Landmark:</div>
-                <div class="location-value">
-                    <span id="nearestLandmark">-</span> (<span id="landmarkDistance">-</span> away)
-                </div>
-                <div class="tracking-status" id="trackingStatus">
-                    <span class="tracking-dot"></span>
-                    <span id="trackingMessage">Live tracking active</span>
-                </div>
+            <div class="section">
+                <h2>About Us</h2>
+                <p>Welcome to Georgia AI Tour Guide – your personal companion for exploring the rich history and culture of Georgia. Our innovative location-based audio tour system uses cutting-edge AI narration to bring historical sites, cultural landmarks, and hidden gems to life.</p>
+                <p>Whether you're a history enthusiast, cultural explorer, or adventure seeker, our tours are designed to provide an immersive and personalized experience tailored to your location and interests.</p>
             </div>
 
-            <div class="button-group">
-                <button class="btn btn--primary" id="startLocationBtn">
-                    <span>📍</span> Get Location
-                </button>
-                <button class="btn btn--primary" id="demoModeBtn" style="background: rgba(32, 128, 144, 0.6);">
-                    <span>🎯</span> Try Demo (Tbilisi)
-                </button>
-                <button class="btn btn--secondary" id="watchLocationBtn" style="display: none;">
-                    <span>🔄</span> Stop Tracking
-                </button>
-            </div>
-        </div>
-
-        <!-- Tour Generation Card -->
-        <div class="card" id="tourCard" style="display: none;">
-            <h2>🗺️ Your Personalized Tour</h2>
-            <p style="color: var(--color-text-secondary); margin-top: 0;">
-                Based on your location at <strong id="currentLocationName">-</strong>, we've generated a tour with nearby attractions.
-            </p>
-
-            <div class="route-tracking" id="routeTracking" style="display: none;">
-                <h3>📍 Route Navigation</h3>
-                <div class="navigation-display" id="navigationDisplay"></div>
-                <div class="tracking-status" id="trackingStatus2">
-                    <span class="tracking-dot"></span>
-                    <span id="trackingMessage2">Following route</span>
+            <div class="section">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Share Location</h3>
+                        <p>Enable GPS to share your real-time location with our app</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Complete Payment</h3>
+                        <p>Secure payment processing to unlock your personalized tour</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Get Tour</h3>
+                        <p>Receive a custom tour based on nearby attractions and landmarks</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Enjoy Tour</h3>
+                        <p>Listen to AI narration and follow GPS-guided navigation</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label class="form-label" for="narratorSelect">Choose Narrator Voice:</label>
-                <select class="narrator-select" id="narratorSelect">
-                    <option value="default">English (Default)</option>
-                    <option value="female">English (Female)</option>
-                    <option value="male">English (Male)</option>
-                </select>
-            </div>
-
-            <div class="button-group">
-                <button class="btn btn--primary" id="startTourBtn">
-                    <span>▶️</span> Start Audio Tour
-                </button>
-                <button class="btn btn--secondary" id="pauseTourBtn" style="display: none;">
-                    <span>⏸️</span> Pause
-                </button>
-                <button class="btn btn--secondary" id="stopTourBtn" style="display: none;">
-                    <span>⏹️</span> Stop
-                </button>
-            </div>
-
-            <div class="audio-controls" id="audioStatus" style="display: none;">
-                <span class="audio-status">
-                    <span class="audio-status-active">🔊 Audio playing</span>
-                </span>
-                <div class="spinner" style="margin: 0;"></div>
-            </div>
-
-            <div style="margin-top: var(--space-24); border-top: 1px solid var(--color-border); padding-top: var(--space-24);">
-                <h3 style="margin: 0 0 var(--space-16) 0; font-size: 16px;">Tour Stops</h3>
-                <ul class="tour-list" id="tourList"></ul>
+            <div class="section">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p>support@georgiaitourguide.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🌐 Website</h3>
+                        <p>www.georgiaitourguide.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>💬 Support</h3>
+                        <p>Available 24/7 for assistance</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Info Box -->
-        <div class="info-box">
-            <strong>💡 How it works:</strong> Click "Get Location" to share your GPS coordinates. The app will detect nearby attractions and generate a custom walking tour. Then hit "Start Audio Tour" to hear narrated descriptions of each stop as an audio guide.
+        <!-- APP PAGE -->
+        <div class="app-page" id="appPage">
+            <div class="nav-header">
+                <h1 style="margin: 0; font-size: 20px;">🎯 Georgia AI Tour Guide</h1>
+                <button class="btn btn--secondary" onclick="backToLanding()">← Back</button>
+            </div>
+
+            <!-- Location Card -->
+            <div class="card">
+                <h2>📍 Your Location</h2>
+                <div class="status-section">
+                    <div class="status-icon">
+                        <span id="locationStatus" class="spinner"></span>
+                    </div>
+                    <div class="status-content">
+                        <h3 id="locationTitle">Getting your location...</h3>
+                        <p id="locationDesc">Requesting GPS access...</p>
+                    </div>
+                </div>
+
+                <div class="location-display" id="locationDisplay" style="display: none;">
+                    <div class="location-label">Current Coordinates:</div>
+                    <div class="location-value">
+                        Lat: <span id="latValue">-</span>, Lon: <span id="lonValue">-</span>
+                    </div>
+                    <div class="location-label" style="margin-top: var(--space-12);">Nearest Landmark:</div>
+                    <div class="location-value">
+                        <span id="nearestLandmark">-</span> (<span id="landmarkDistance">-</span> away)
+                    </div>
+                    <div class="tracking-status" id="trackingStatus">
+                        <span class="tracking-dot"></span>
+                        <span id="trackingMessage">Live tracking active</span>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn--primary" id="startLocationBtn">
+                        <span>📍</span> Enable Location
+                    </button>
+                    <button class="btn btn--primary" id="demoModeBtn" style="background: rgba(32, 128, 144, 0.6);">
+                        <span>🎯</span> Try Demo
+                    </button>
+                    <button class="btn btn--secondary" id="watchLocationBtn" style="display: none;">
+                        <span>🔄</span> Stop Tracking
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tour Generation Card -->
+            <div class="card" id="tourCard" style="display: none;">
+                <h2>🗺️ Your Personalized Tour</h2>
+                <p style="color: var(--color-text-secondary); margin-top: 0;">
+                    Based on your location at <strong id="currentLocationName">-</strong>, we've generated a tour with nearby attractions.
+                </p>
+
+                <div class="route-tracking" id="routeTracking" style="display: none;">
+                    <h3>📍 Route Navigation</h3>
+                    <div class="navigation-display" id="navigationDisplay"></div>
+                    <div class="tracking-status" id="trackingStatus2">
+                        <span class="tracking-dot"></span>
+                        <span id="trackingMessage2">Following route</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="narratorSelect">Choose Narrator Voice:</label>
+                    <select class="narrator-select" id="narratorSelect">
+                        <option value="default">English (Default)</option>
+                        <option value="female">English (Female)</option>
+                        <option value="male">English (Male)</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn--primary" id="startTourBtn">
+                        <span>▶️</span> Start Audio Tour
+                    </button>
+                    <button class="btn btn--secondary" id="pauseTourBtn" style="display: none;">
+                        <span>⏸️</span> Pause
+                    </button>
+                    <button class="btn btn--secondary" id="stopTourBtn" style="display: none;">
+                        <span>⏹️</span> Stop
+                    </button>
+                </div>
+
+                <div class="audio-controls" id="audioStatus" style="display: none;">
+                    <span class="audio-status">
+                        <span class="audio-status-active">🔊 Audio playing</span>
+                    </span>
+                    <div class="spinner" style="margin: 0;"></div>
+                </div>
+
+                <div style="margin-top: var(--space-24); border-top: 1px solid var(--color-border); padding-top: var(--space-24);">
+                    <h3 style="margin: 0 0 var(--space-16) 0; font-size: 16px;">Tour Stops</h3>
+                    <ul class="tour-list" id="tourList"></ul>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 How it works:</strong> Click "Enable Location" to share your GPS coordinates. After location is confirmed, you'll complete a secure payment. The app will then detect nearby attractions and generate a custom walking tour with AI narration.
+            </div>
+        </div>
+    </div>
+
+    <!-- PAYMENT MODAL -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Complete Your Payment</h2>
+                <p>Unlock your personalized tour experience</p>
+            </div>
+
+            <div class="price-display">
+                <p class="amount">$4.99</p>
+                <p>One-time payment for full tour access</p>
+            </div>
+
+            <form id="paymentForm" onsubmit="processPayment(event)">
+                <div class="form-group">
+                    <label class="form-label" for="cardName">Full Name</label>
+                    <input type="text" class="form-input" id="cardName" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="cardNumber">Card Number</label>
+                    <input type="text" class="form-input" id="cardNumber" placeholder="4242 4242 4242 4242" maxlength="19" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="cardExpiry">Expiry (MM/YY)</label>
+                        <input type="text" class="form-input" id="cardExpiry" placeholder="12/25" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cardCVC">CVC</label>
+                        <input type="text" class="form-input" id="cardCVC" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn--secondary" onclick="closePaymentModal()">Cancel</button>
+                    <button type="submit" class="btn btn--primary">💳 Pay Now</button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -529,7 +867,7 @@
                 name: "Baratashvili Bridge",
                 lat: 41.7265,
                 lon: 44.8145,
-                description: "The iconic bridge spanning the Mtkvari river. Built in 1851, Baratashvili Bridge is known as the Bridge of Love. It connects the old town to the new city and offers stunning views of Narikala Fortress. Many couples come here to attach locks symbolizing their love.",
+                description: "The iconic bridge spanning the Mtkvari river. Built in 1851, Baratashvili Bridge is known as the Bridge of Love. It connects the old town to the new city and offers stunning views of Narikala Fortress.",
                 duration: 5,
                 category: "landmark"
             },
@@ -537,7 +875,7 @@
                 name: "Narikala Fortress",
                 lat: 41.7276,
                 lon: 44.8089,
-                description: "Perched on a hill overlooking old Tbilisi, Narikala Fortress dates back to the 4th century. The fortress has witnessed over 1500 years of history. From its walls, you can see panoramic views of the entire city, the Mtkvari river, and the surrounding mountains.",
+                description: "Perched on a hill overlooking old Tbilisi, Narikala Fortress dates back to the 4th century. From its walls, you can see panoramic views of the entire city, the Mtkvari river, and the surrounding mountains.",
                 duration: 8,
                 category: "fortress"
             },
@@ -545,7 +883,7 @@
                 name: "Anchiskhati Basilica",
                 lat: 41.7290,
                 lon: 44.8120,
-                description: "One of the oldest churches in Georgia, built in the 6th century. Anchiskhati Basilica is located in the heart of old Tbilisi's historic district. The church is dedicated to the Holy Cross and features beautiful traditional Georgian architecture with ancient stone carvings.",
+                description: "One of the oldest churches in Georgia, built in the 6th century. The church is dedicated to the Holy Cross and features beautiful traditional Georgian architecture with ancient stone carvings.",
                 duration: 6,
                 category: "church"
             },
@@ -553,7 +891,7 @@
                 name: "Metekhi Church",
                 lat: 41.7293,
                 lon: 44.8169,
-                description: "Home to the equestrian statue of Saint Nino, the patron saint of Georgia. The church was built in the 5th century and completely rebuilt in the 1980s. Inside you'll find remarkable frescoes and candles lit by devoted pilgrims from across the country.",
+                description: "Home to the equestrian statue of Saint Nino, the patron saint of Georgia. The church was built in the 5th century and features remarkable frescoes and candles lit by devoted pilgrims.",
                 duration: 5,
                 category: "church"
             },
@@ -561,7 +899,7 @@
                 name: "Sioni Cathedral",
                 lat: 41.7303,
                 lon: 44.8145,
-                description: "A magnificent 8th-century cathedral featuring impressive Byzantine architecture. Sioni Cathedral houses sacred relics and is famous for its ornate interior decorations. The cathedral represents the spiritual heart of the old city and attracts pilgrims and visitors year-round.",
+                description: "A magnificent 8th-century cathedral featuring impressive Byzantine architecture. Sioni Cathedral houses sacred relics and is famous for its ornate interior decorations.",
                 duration: 7,
                 category: "cathedral"
             },
@@ -569,7 +907,7 @@
                 name: "Tbilisi Old Town",
                 lat: 41.7292,
                 lon: 44.8160,
-                description: "Wander through the charming cobblestone streets of old Tbilisi. Narrow alleys wind between colorful 18th and 19th-century buildings with wooden balconies. The old town is filled with traditional shops, cafes, and restaurants serving authentic Georgian cuisine.",
+                description: "Wander through the charming cobblestone streets of old Tbilisi. Narrow alleys wind between colorful 18th and 19th-century buildings with wooden balconies.",
                 duration: 10,
                 category: "area"
             },
@@ -577,7 +915,7 @@
                 name: "Abanotubani Sulfur Baths",
                 lat: 41.7241,
                 lon: 44.8099,
-                description: "Located in the warm natural springs beneath Narikala Fortress, these historic public baths date back centuries. The domed stone structures and naturally heated sulfurous water create a unique spa experience. Relax in the traditional bathhouses after exploring the old city.",
+                description: "Located in the warm natural springs beneath Narikala Fortress, these historic public baths date back centuries. Naturally heated sulfurous water creates a unique spa experience.",
                 duration: 8,
                 category: "bath"
             },
@@ -585,7 +923,7 @@
                 name: "Gabriadze Theater",
                 lat: 41.7315,
                 lon: 44.8112,
-                description: "A unique marionette theater housed in a whimsical building with a clock tower. The theater features intricate puppets and creative performances telling Georgian folk tales and stories. The building itself is a work of art with colorful details and an enchanting atmosphere.",
+                description: "A unique marionette theater housed in a whimsical building with a clock tower. The theater features intricate puppets and creative performances telling Georgian folk tales.",
                 duration: 4,
                 category: "cultural"
             }
@@ -597,8 +935,49 @@
         let isSpeaking = false;
         let pausedIndex = 0;
         let tourStarted = false;
-        const REGENERATE_DISTANCE = 150; // meters - distance to trigger regeneration
-        const ROUTE_TOLERANCE = 300; // meters - how far user can deviate before warning
+        let paymentProcessed = false;
+        const REGENERATE_DISTANCE = 150;
+        const ROUTE_TOLERANCE = 300;
+
+        // Navigation Functions
+        function goToApp() {
+            document.getElementById('landingPage').style.display = 'none';
+            document.getElementById('appPage').style.display = 'block';
+        }
+
+        function backToLanding() {
+            document.getElementById('appPage').style.display = 'none';
+            document.getElementById('landingPage').style.display = 'block';
+            stopTour();
+            if (watchId !== null) {
+                navigator.geolocation.clearWatch(watchId);
+                watchId = null;
+            }
+            currentLocation = null;
+        }
+
+        // Payment Modal Functions
+        function showPaymentModal() {
+            document.getElementById('paymentModal').classList.add('show');
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').classList.remove('show');
+        }
+
+        function processPayment(event) {
+            event.preventDefault();
+            const cardName = document.getElementById('cardName').value;
+            const cardNumber = document.getElementById('cardNumber').value;
+            
+            if (cardName && cardNumber) {
+                paymentProcessed = true;
+                closePaymentModal();
+                alert('✅ Payment successful! Your tour has been unlocked.');
+                generateTour();
+                document.getElementById('paymentForm').reset();
+            }
+        }
 
         // DOM elements
         const startLocationBtn = document.getElementById('startLocationBtn');
@@ -610,10 +989,10 @@
         const locationDisplay = document.getElementById('locationDisplay');
         const tourCard = document.getElementById('tourCard');
 
-        // Get user location and start continuous tracking
+        // Location Tracking
         function startLocationTracking() {
             if (!navigator.geolocation) {
-                showError('Geolocation is not supported by your browser');
+                alert('Geolocation is not supported by your browser');
                 return;
             }
 
@@ -621,7 +1000,6 @@
             document.getElementById('locationTitle').textContent = 'Getting your location...';
             document.getElementById('locationDesc').textContent = 'Please allow access to your location...';
 
-            // Use watchPosition for continuous tracking instead of one-time
             watchId = navigator.geolocation.watchPosition(
                 (position) => {
                     const newLocation = {
@@ -630,82 +1008,59 @@
                         accuracy: position.coords.accuracy
                     };
 
-                    // Check if user has moved significantly
                     if (currentLocation) {
-                        const distanceMoved = getDistance(
-                            currentLocation.lat,
-                            currentLocation.lon,
-                            newLocation.lat,
-                            newLocation.lon
-                        );
-
-                        // Auto-regenerate tour if user moved too far or went off-route
+                        const distanceMoved = getDistance(currentLocation.lat, currentLocation.lon, newLocation.lat, newLocation.lon);
                         if (tourStarted && distanceMoved > REGENERATE_DISTANCE) {
                             regenerateTour(newLocation);
                         }
-
-                        // Check if user is off-route
                         if (tourStarted && currentTour) {
                             checkRouteDeviation(newLocation);
                         }
                     } else {
-                        // First time getting location
                         displayLocation();
-                        generateTour();
+                        showPaymentModal();
                     }
 
                     currentLocation = newLocation;
                     updateLocationDisplay();
                 },
                 (error) => {
-                    showError(`Error: ${error.message}`);
+                    alert(`Error: ${error.message}`);
                     startLocationBtn.disabled = false;
                 }
             );
         }
 
-        // Update location display with continuous coordinates
         function updateLocationDisplay() {
             document.getElementById('latValue').textContent = currentLocation.lat.toFixed(4);
             document.getElementById('lonValue').textContent = currentLocation.lon.toFixed(4);
-            
             const nearest = findNearestAttraction();
             document.getElementById('nearestLandmark').textContent = nearest.name;
-            document.getElementById('landmarkDistance').textContent = 
-                (nearest.distance * 1000).toFixed(0) + ' meters';
+            document.getElementById('landmarkDistance').textContent = (nearest.distance * 1000).toFixed(0) + ' meters';
         }
 
-        // Display location info
         function displayLocation() {
             updateLocationDisplay();
-            
             const nearest = findNearestAttraction();
             document.getElementById('locationTitle').textContent = '📍 Location Found';
-            document.getElementById('locationDesc').textContent = 
-                `You are near ${nearest.name} (${(nearest.distance * 1000).toFixed(0)}m away)`;
-            
+            document.getElementById('locationDesc').textContent = `You are near ${nearest.name} (${(nearest.distance * 1000).toFixed(0)}m away)`;
             locationDisplay.style.display = 'block';
             startLocationBtn.style.display = 'none';
             watchLocationBtn.style.display = 'inline-flex';
         }
 
-        // Calculate distance between two coordinates
         function getDistance(lat1, lon1, lat2, lon2) {
-            const R = 6371; // Earth's radius in km
+            const R = 6371;
             const dLat = (lat2 - lat1) * Math.PI / 180;
             const dLon = (lon2 - lon1) * Math.PI / 180;
-            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
             const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
             return R * c;
         }
 
-        // Find nearest attraction
         function findNearestAttraction() {
             let nearest = null;
             let minDistance = Infinity;
-
             attractions.forEach(attr => {
                 const dist = getDistance(currentLocation.lat, currentLocation.lon, attr.lat, attr.lon);
                 if (dist < minDistance) {
@@ -713,15 +1068,12 @@
                     nearest = { ...attr, distance: dist };
                 }
             });
-
             return nearest;
         }
 
-        // Generate tour based on location
         function generateTour() {
-            if (!currentLocation) return;
+            if (!currentLocation || !paymentProcessed) return;
 
-            // Get nearest 5 attractions within 2km
             const nearbyAttractions = attractions
                 .map(attr => ({
                     ...attr,
@@ -732,18 +1084,16 @@
                 .slice(0, 5);
 
             if (nearbyAttractions.length === 0) {
-                showError('No attractions found nearby. Please try a different location.');
+                alert('No attractions found nearby. Please try a different location.');
                 return;
             }
 
             currentTour = nearbyAttractions;
             pausedIndex = 0;
             document.getElementById('currentLocationName').textContent = findNearestAttraction().name;
-            
-            // Render tour stops
+
             const tourList = document.getElementById('tourList');
             tourList.innerHTML = '';
-            
             currentTour.forEach((stop, index) => {
                 const li = document.createElement('li');
                 li.className = 'tour-item';
@@ -764,21 +1114,13 @@
             updateNavigationDisplay();
         }
 
-        // Regenerate tour when user moves to a different area
         function regenerateTour(newLocation) {
             currentLocation = newLocation;
-            console.log('User moved significantly - regenerating tour...');
-            
-            // Pause audio if playing
             if (isSpeaking) {
                 speechSynthesis.cancel();
                 isSpeaking = false;
             }
-
-            // Regenerate tour
             generateTour();
-            
-            // Show notification
             const msg = `📍 You've moved to a new area! Tour regenerated based on ${findNearestAttraction().name}.`;
             document.getElementById('navigationDisplay').innerHTML = `
                 <div style="background: rgba(32, 128, 144, 0.1); padding: 12px; border-radius: 6px; width: 100%; text-align: center; font-weight: 600; color: var(--color-primary);">
@@ -787,22 +1129,16 @@
             `;
         }
 
-        // Check if user is deviating from the planned route
         function checkRouteDeviation(newLocation) {
             if (!currentTour || currentTour.length === 0) return;
-
-            // Calculate distance to nearest tour stop
             let minDistanceToTour = Infinity;
             currentTour.forEach(stop => {
                 const dist = getDistance(newLocation.lat, newLocation.lon, stop.lat, stop.lon);
                 minDistanceToTour = Math.min(minDistanceToTour, dist);
             });
-
             const statusEl = document.getElementById('trackingStatus2');
             const trackingMsg = document.getElementById('trackingMessage2');
-
             if (minDistanceToTour > (ROUTE_TOLERANCE / 1000)) {
-                // User is off-route
                 statusEl.classList.add('off-route');
                 const dot = statusEl.querySelector('.tracking-dot');
                 dot.classList.add('off-route');
@@ -815,28 +1151,17 @@
             }
         }
 
-        // Update navigation display with direction to next stop
         function updateNavigationDisplay() {
             if (!currentTour || tourStarted === false) return;
-
             const nextStop = currentTour[pausedIndex];
             if (!nextStop) return;
-
-            const distanceToNext = getDistance(
-                currentLocation.lat,
-                currentLocation.lon,
-                nextStop.lat,
-                nextStop.lon
-            ) * 1000; // Convert to meters
-
-            // Determine direction arrow
+            const distanceToNext = getDistance(currentLocation.lat, currentLocation.lon, nextStop.lat, nextStop.lon) * 1000;
             let arrow = '↓';
             if (distanceToNext < 50) {
-                arrow = '📍'; // Arrived
+                arrow = '📍';
             } else if (distanceToNext < 200) {
-                arrow = '➡️'; // Close
+                arrow = '➡️';
             }
-
             document.getElementById('navigationDisplay').innerHTML = `
                 <div class="direction-arrow">${arrow}</div>
                 <div class="route-info">
@@ -844,15 +1169,11 @@
                     <div class="route-info-secondary">${distanceToNext.toFixed(0)}m away • ${nextStop.duration} min stop</div>
                 </div>
             `;
-
-            // Show routing section
             document.getElementById('routeTracking').style.display = 'block';
         }
 
-        // Start audio tour
         async function startAudioTour() {
             if (!currentTour || currentTour.length === 0) return;
-
             tourStarted = true;
             startTourBtn.style.display = 'none';
             pauseTourBtn.style.display = 'inline-flex';
@@ -863,20 +1184,10 @@
 
             for (let i = pausedIndex; i < currentTour.length; i++) {
                 if (!isSpeaking) break;
-
                 const stop = currentTour[i];
                 pausedIndex = i;
-
-                // Update navigation display
                 updateNavigationDisplay();
-
-                // Build narration
-                const narration = `Stop ${i + 1} of ${currentTour.length}. ` +
-                    `You have arrived at ${stop.name}. ` +
-                    stop.description + 
-                    `. This stop should take about ${stop.duration} minutes to explore. ` +
-                    (i < currentTour.length - 1 ? `Next, head to stop ${i + 2}.` : `This concludes your tour.`);
-
+                const narration = `Stop ${i + 1} of ${currentTour.length}. You have arrived at ${stop.name}. ${stop.description}. This stop should take about ${stop.duration} minutes to explore. ${i < currentTour.length - 1 ? `Next, head to stop ${i + 2}.` : `This concludes your tour.`}`;
                 await speakText(narration);
             }
 
@@ -885,44 +1196,29 @@
             }
         }
 
-        // Text to speech using Web Speech API
         function speakText(text) {
             return new Promise((resolve) => {
                 if (!('speechSynthesis' in window)) {
-                    console.error('Speech synthesis not supported');
                     resolve();
                     return;
                 }
-
                 const utterance = new SpeechSynthesisUtterance(text);
-                
-                // Get selected voice
                 const voiceSelect = narratorSelect.value;
                 const voices = speechSynthesis.getVoices();
-                
                 if (voiceSelect === 'female' && voices.length > 1) {
                     utterance.voice = voices[1];
                 } else if (voiceSelect === 'male' && voices.length > 2) {
                     utterance.voice = voices[2];
                 }
-
                 utterance.rate = 1;
                 utterance.pitch = 1;
                 utterance.volume = 0.8;
-
-                utterance.onend = () => {
-                    resolve();
-                };
-
-                utterance.onerror = () => {
-                    resolve();
-                };
-
+                utterance.onend = () => resolve();
+                utterance.onerror = () => resolve();
                 speechSynthesis.speak(utterance);
             });
         }
 
-        // Pause tour
         function pauseTour() {
             isSpeaking = false;
             speechSynthesis.cancel();
@@ -933,7 +1229,6 @@
             document.getElementById('audioStatus').style.display = 'none';
         }
 
-        // Stop tour
         function stopTour() {
             isSpeaking = false;
             tourStarted = false;
@@ -947,7 +1242,6 @@
             document.getElementById('routeTracking').style.display = 'none';
         }
 
-        // End tour
         function endTour() {
             tourStarted = false;
             pausedIndex = 0;
@@ -957,17 +1251,22 @@
             startTourBtn.style.display = 'inline-flex';
             document.getElementById('audioStatus').style.display = 'none';
             document.getElementById('routeTracking').style.display = 'none';
-            alert('Tour complete! Thank you for exploring Georgia with us.');
-        }
-
-        // Show error
-        function showError(message) {
-            alert(message);
+            alert('🎉 Tour complete! Thank you for exploring Georgia with us.');
         }
 
         // Event listeners
         startLocationBtn.addEventListener('click', startLocationTracking);
-        document.getElementById('demoModeBtn').addEventListener('click', activateDemoMode);
+        document.getElementById('demoModeBtn').addEventListener('click', () => {
+            currentLocation = { lat: 41.7292, lon: 44.8160, accuracy: 10 };
+            document.getElementById('locationStatus').innerHTML = '✅';
+            document.getElementById('locationTitle').textContent = '📍 Demo Mode Active';
+            document.getElementById('locationDesc').textContent = 'Using Tbilisi Old Town as your location';
+            locationDisplay.style.display = 'block';
+            startLocationBtn.style.display = 'none';
+            document.getElementById('demoModeBtn').style.display = 'none';
+            watchLocationBtn.style.display = 'inline-flex';
+            showPaymentModal();
+        });
         watchLocationBtn.addEventListener('click', () => {
             if (watchId !== null) {
                 navigator.geolocation.clearWatch(watchId);
@@ -981,30 +1280,12 @@
             tourStarted = false;
             startLocationBtn.disabled = false;
             stopTour();
+            paymentProcessed = false;
         });
-
-        // Demo mode activation - use Tbilisi Old Town coordinates
-        function activateDemoMode() {
-            currentLocation = {
-                lat: 41.7292,
-                lon: 44.8160,
-                accuracy: 10
-            };
-            document.getElementById('locationStatus').innerHTML = '✅';
-            document.getElementById('locationTitle').textContent = '📍 Demo Mode Active';
-            document.getElementById('locationDesc').textContent = 'Using Tbilisi Old Town as your location';
-            locationDisplay.style.display = 'block';
-            startLocationBtn.style.display = 'none';
-            document.getElementById('demoModeBtn').style.display = 'none';
-            watchLocationBtn.style.display = 'inline-flex';
-            generateTour();
-        }
-
         startTourBtn.addEventListener('click', startAudioTour);
         pauseTourBtn.addEventListener('click', pauseTour);
         stopTourBtn.addEventListener('click', stopTour);
 
-        // Load voices on page load
         window.addEventListener('load', () => {
             if ('speechSynthesis' in window) {
                 speechSynthesis.getVoices();
